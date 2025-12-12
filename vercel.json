@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/chat/route.js": {
+      "runtime": "@vercel/node@3.13.0"
+    }
+  },
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" }
+  ]
+}
