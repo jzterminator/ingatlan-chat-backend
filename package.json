@@ -1,0 +1,11 @@
+{
+  "name": "ingatlan-chat-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "openai": "^4.52.7"
+  },
+  "scripts": {
+    "dev": "node api/chat.js"
+  }
+}
