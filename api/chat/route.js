@@ -1,5 +1,5 @@
 import OpenAI from 'openai';
-import { NextResponse } from 'next/server';  // Ez kell a Response-hoz!
+import { NextResponse } from 'next/server';  // Ez a kulcs – import NextResponse!
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -31,7 +31,7 @@ export async function POST(request) {
     const messages = await openai.beta.threads.messages.list(thread.id);
     const reply = messages.data[0].content[0].text.value;
 
-    return NextResponse.json({ reply, threadId: thread.id });
+    return NextResponse.json({ reply, threadId: thread.id });  // NextResponse használata!
   } catch (e) {
     return NextResponse.json({ error: e.message }, { status: 500 });
   }
